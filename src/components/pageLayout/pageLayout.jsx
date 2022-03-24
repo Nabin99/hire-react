@@ -12,12 +12,11 @@ const PageLayout = ({heading,children}) =>{
                 }
                 }
             >
-                <div className="mask" style={{backgroundColor: "rgba(0, 0, 0, 0.6)"}}>
+                <div className="mask d-flex justify-content-center align-items-center" style={{backgroundColor: "rgba(0, 0, 0, 0.6)",minHeight:"80vh"}}>
                 <div className="d-flex justify-content-center align-items-center">
                     <div className="text-white">
                     <h1 className="mb-3">{heading}</h1>
                    {children}
-                  
                     </div>
                 </div>
                 </div>

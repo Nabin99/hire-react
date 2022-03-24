@@ -1,9 +1,10 @@
 import PageLayout from "../../components/pageLayout/pageLayout";
+import SliderComponent from "../../components/slider/slider";
 
 const SimpleSlider =() =>{
     return(
         <PageLayout heading="Simple Slider">
-        <h1>main Content</h1>
+        <SliderComponent/>
     </PageLayout>
     )
 }
