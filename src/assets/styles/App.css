@@ -22,3 +22,12 @@ body {
     text-decoration: none;
     color:inherit;
 }
+.errorPage{
+    font-size: 4rem;
+    color:red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    text-align: center;
+}

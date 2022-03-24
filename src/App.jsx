@@ -17,7 +17,8 @@ import {
 
 
 const App = ()=>{
-    return(<BrowserRouter>
+    return(
+    <BrowserRouter>
         <Navigation />
         <Routes>
             <Route path = "/task1/simpleSlider" element={<SimpleSlider/>} />
@@ -26,9 +27,18 @@ const App = ()=>{
             <Route path = "/task2/api" element={<ApiData/>} />
             <Route path = "/task3/simpleBarChart" element={<SimpleBarChar/>} />
             <Route path = "/task3/mapInterface" element={<MapInterface/>} />
-        
+            <Route
+                path="*"
+                element={
+                    <main className="errorPage">
+                    <p>Error!! <br/>
+                    Status Code: 404<br/>
+                    page not found!!
+                    </p>
+                    </main>
+                }
+            />
         </Routes>
-        
         </BrowserRouter>
     );
 }

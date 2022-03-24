@@ -1,6 +1,10 @@
+import PageLayout from "../../components/pageLayout/pageLayout";
+
 const ApiData =() =>{
     return(
-        <h1>Api Data</h1>
+        <PageLayout heading="Api Data">
+        <h1>main Content</h1>
+    </PageLayout>
     )
 }
 export default ApiData;

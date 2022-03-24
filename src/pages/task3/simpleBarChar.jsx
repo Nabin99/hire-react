@@ -1,6 +1,10 @@
+import PageLayout from "../../components/pageLayout/pageLayout";
+
 const SimpleBarChar =() =>{
     return(
-        <h1>Simple Bar Char</h1>
+        <PageLayout heading="Simple Bar Char">
+        <h1>main Content</h1>
+    </PageLayout>
     )
 }
 export default SimpleBarChar;
