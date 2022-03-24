@@ -1,9 +1,10 @@
 import PageLayout from "../../components/pageLayout/pageLayout";
+import ProgressBarComponent from "../../components/progressBar/progressBar";
 
 const ProgressBar =() =>{
     return(
         <PageLayout heading="Pogress Bar">
-            <h1>main Content</h1>
+            <ProgressBarComponent/>
         </PageLayout>
     )
 }

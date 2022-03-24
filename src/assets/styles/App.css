@@ -71,3 +71,17 @@ body {
     cursor: pointer;
     border-radius: 100%;
   }
+
+  #myProgress {
+    width: 100%;
+    min-width: 500px;
+    background-color: #ddd;
+    border:2px solid white;
+    border-radius: 20px;
+  }
+  
+  #myBar {
+    height: 30px;
+    background-color: blue;
+    border-radius: 20px;
+  }
