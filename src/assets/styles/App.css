@@ -85,3 +85,17 @@ body {
     background-color: blue;
     border-radius: 20px;
   }
+  #filter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+  }
+  #filter input[type=text]{
+    padding: 6px;
+    margin-right: 16px;
+    border: none;
+    font-size: 17px;
+    border-radius: 4px;
+    width:450px;
+  }

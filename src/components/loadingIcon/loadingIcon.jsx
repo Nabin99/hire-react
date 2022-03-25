@@ -1,20 +1,31 @@
 import { Button } from "react-bootstrap"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 const LoadingIconComponent = () =>{
 
     const [isLoading,setIsLoading] = useState(false);
+    let id;
     
     const OnClick=() => {
         setIsLoading(true);
-       setTimeout(()=>setIsLoading(false),5000); 
+       id=setTimeout(()=>setIsLoading(false),5000); 
       };
-    return(
-            <Button onClick={OnClick} variant="primary" size="lg">
-                { isLoading?(<div>
-                <div class="spinner-border text-light" role="status"></div>
-                <span class="sr-only">Loading...</span>
-                </div>):"Click Me!" }
-            </Button>
+
+      useEffect(()=>{
+          return()=>{
+              clearTimeout(id);
+          }
+      })
+
+    return(<div>
+         { isLoading?(<div>
+        <div className="spinner-border text-light" role="status"></div>
+        <p className="sr-only">Loading...</p>
+        </div>): null}
+        <Button onClick={OnClick} variant="primary" size="lg">
+        Click Me!
+        </Button>
+        </div>
+            
     )
 }
 
