@@ -8,6 +8,7 @@ import ProgressBar from "./pages/task1/pogressBar";
 import ApiData from "./pages/task2/api";
 import SimpleBarChar from "./pages/task3/simpleBarChar";
 import MapInterface from "./pages/task3/mapInterface";
+import Welcome from "./pages/welcome";
 
 import {
     BrowserRouter,
@@ -21,6 +22,7 @@ const App = ()=>{
     <BrowserRouter>
         <Navigation />
         <Routes>
+        <Route path = "/" element={<Welcome/>} />
             <Route path = "/task1/simpleSlider" element={<SimpleSlider/>} />
             <Route path = "/task1/loadingIcon" element={<LoadingIcon/>} />
             <Route path = "/task1/progressBar" element={<ProgressBar/>} />
