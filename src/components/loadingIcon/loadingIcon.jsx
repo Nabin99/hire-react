@@ -1,20 +1,20 @@
 import { Button } from "react-bootstrap"
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 const LoadingIconComponent = () =>{
 
     const [isLoading,setIsLoading] = useState(false);
-    let id;
-    
+    let id = useRef(null);
     const OnClick=() => {
         setIsLoading(true);
-       id=setTimeout(()=>setIsLoading(false),5000); 
+       id.current=setTimeout(()=>setIsLoading(false),5000); 
       };
 
       useEffect(()=>{
-          return()=>{
-              clearTimeout(id);
+          return ()=>{
+              clearTimeout(id.current);
           }
-      })
+      },[])
+
 
     return(<div>
          { isLoading?(<div>

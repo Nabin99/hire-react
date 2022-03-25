@@ -9,7 +9,7 @@ const PageLayout = ({heading,children}) =>{
                 backgroundPosition:"center",
                 backgroundSize:"cover",
                 backgroundAttachment:'fixed',
-                height:"100vh"
+                height:"95vh"
                 }
                 }
             >

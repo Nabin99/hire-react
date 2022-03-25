@@ -1,10 +1,11 @@
 import { Button } from "react-bootstrap";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const ProgressBarComponent = () =>{
     const [value,setValue] = useState(50);
+    const id = useRef(null);
     const OnClick=()=>{
-    let id = setInterval(()=>{
+    id.current = setInterval(()=>{
             setValue(pre=>{
                  if (pre < 100) {
                      return ++pre;
@@ -15,6 +16,13 @@ const ProgressBarComponent = () =>{
                 });  
       }, 10);
     }
+
+    useEffect(()=>{
+        return ()=>{
+            clearInterval(id.current);
+        }
+    },[])
+
   
     return(
             <div >
